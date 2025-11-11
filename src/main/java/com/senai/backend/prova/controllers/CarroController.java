@@ -33,7 +33,7 @@ public class CarroController {
 
      // ✅ Buscar por ID (GET)
     @GetMapping("/{id}")
-    public Optional<Carro> buscarPorId(@PathVariable Long id) {
+    public Optional<Carro> buscarPorId(@PathVariable Integer id) {
         return carroService.buscarPorId(id);
     }
 
@@ -51,7 +51,7 @@ public class CarroController {
 
     // ✅ Remover por ID (DELETE)
     @DeleteMapping("/remover/{id}")
-    public void remover(@PathVariable Long id) {
+    public void remover(@PathVariable Integer id) {
         carroService.remover(id);
     }
 

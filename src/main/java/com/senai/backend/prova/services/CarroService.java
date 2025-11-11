@@ -17,7 +17,7 @@ public class CarroService {
         return carroRepository.save(carro);
     }
 
-     public Optional<Carro> buscarPorId(Long id) {
+     public Optional<Carro> buscarPorId(Integer id) {
         return carroRepository.findById(id);
     }
 
@@ -29,7 +29,7 @@ public class CarroService {
         return carroRepository.count();
     }
 
-    public void remover(Long id) {
+    public void remover(Integer id) {
         carroRepository.deleteById(id);
     }
 }
